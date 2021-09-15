@@ -30,8 +30,7 @@ int start_stream() {
     NET_DVR_SetExceptionCallBack_V30(0, NULL,g_ExceptionCallBack, NULL);
     //login
     NET_DVR_DEVICEINFO_V30 struDeviceInfo;
-    lUserID = NET_DVR_Login_V30("sapiens-iot.com", 8000, "admin", "ZR123456", &struDeviceInfo);
-    //lUserID = NET_DVR_Login_V30("git.hq.gd", 6081, "admin", "123456", &struDeviceInfo);
+    lUserID = NET_DVR_Login_V30("169.254.76.200", 8000, "admin", "ZR123456", &struDeviceInfo);
     if (lUserID < 0)
     {
         printf("Login error, %d\n", NET_DVR_GetLastError());

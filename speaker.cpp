@@ -40,8 +40,7 @@ int main() {
     //login
     LONG lUserID;
     NET_DVR_DEVICEINFO_V30 struDeviceInfo;
-    lUserID = NET_DVR_Login_V30("git.hq.gd", 6080, "admin", "ONVDTR", &struDeviceInfo);
-    //lUserID = NET_DVR_Login_V30("git.hq.gd", 6081, "admin", "123456", &struDeviceInfo);
+    lUserID = NET_DVR_Login_V30("169.254.76.200", 6080, "admin", "ONVDTR", &struDeviceInfo);
     if (lUserID < 0)
     {
         printf("Login error, %d\n", NET_DVR_GetLastError());
